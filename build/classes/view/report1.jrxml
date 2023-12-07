@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3cb9b3d-721a-4a0c-a16c-1352f2f7626e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from carrental;]]>
+	</queryString>
+	<field name="rent_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vehicle_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rent_date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="return_date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fees" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="181" y="0" width="219" height="47" uuid="65f167a3-9dba-43a6-8088-d6f7fb90d79a"/>
+				<textElement>
+					<font fontName="Century Gothic" size="24"/>
+				</textElement>
+				<text><![CDATA[Car Rentals Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="48" y="2" width="60" height="20" uuid="e80f176c-56f3-482c-b490-afd17daf6378"/>
+				<text><![CDATA[rent_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="2" width="46" height="20" uuid="0834da12-4747-4271-9f0a-080fe33ca4b0"/>
+				<text><![CDATA[vehicle_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="2" width="87" height="20" uuid="9dba6e87-e80d-4cfd-911e-c53e1fd7f66f"/>
+				<text><![CDATA[customer_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="2" width="83" height="20" uuid="78477eaf-cfe6-493b-9022-4a570ec7b2e5"/>
+				<text><![CDATA[rent_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="2" width="77" height="20" uuid="42406a6c-325e-4a83-828a-e3371c70632c"/>
+				<text><![CDATA[fees]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="48" y="18" width="60" height="20" uuid="85131574-e25f-4889-b502-8d4f390bbad9"/>
+				<textFieldExpression><![CDATA[$F{rent_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="18" width="64" height="20" uuid="95ceb8ef-8446-4a12-a9c9-815592c0ede9"/>
+				<textFieldExpression><![CDATA[$F{vehicle_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="18" width="87" height="20" uuid="6d7d2500-181c-44d6-a22a-05dae4ad0a2f"/>
+				<textFieldExpression><![CDATA[$F{customer_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="18" width="83" height="20" uuid="3343c3cd-bb44-4354-88c6-fc20ae92d6d6"/>
+				<textFieldExpression><![CDATA[$F{rent_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="18" width="77" height="20" uuid="c4947a23-e078-4228-b132-6c1b975020ec"/>
+				<textFieldExpression><![CDATA[$F{fees}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="29" splitType="Stretch"/>
+	</summary>
+</jasperReport>
